@@ -17,3 +17,5 @@ TARGET_LINK_LIBRARIES(echo_client boost_system pthread boost_thread)
 ADD_EXECUTABLE(aync_daytimesrc aync_daytimesrc.cpp)
 TARGET_LINK_LIBRARIES(aync_daytimesrc boost_system pthread boost_thread)
 
+ADD_EXECUTABLE(async_echo_server async_echo_server.cpp)
+TARGET_LINK_LIBRARIES(async_echo_server boost_system pthread boost_thread)
