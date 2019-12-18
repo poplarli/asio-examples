@@ -1,0 +1,30 @@
+
+ADD_EXECUTABLE(chat_client chat_client.cpp chat_message.hpp)
+TARGET_LINK_LIBRARIES(chat_client boost_system pthread boost_thread)
+
+ADD_EXECUTABLE(chat_server chat_server.cpp chat_message.hpp)
+TARGET_LINK_LIBRARIES(chat_server boost_system pthread boost_thread)
+
+ADD_EXECUTABLE(async_tcp_echo_server async_tcp_echo_server.cpp)
+TARGET_LINK_LIBRARIES(async_tcp_echo_server boost_system pthread boost_thread)
+
+ADD_EXECUTABLE(blocking_tcp_echo_client blocking_tcp_echo_client.cpp)
+TARGET_LINK_LIBRARIES(blocking_tcp_echo_client boost_system pthread boost_thread)
+
+ADD_EXECUTABLE(blocking_tcp_echo_server blocking_tcp_echo_server.cpp)
+TARGET_LINK_LIBRARIES(blocking_tcp_echo_server boost_system pthread boost_thread)
+
+ADD_EXECUTABLE(blocking_udp_echo_client blocking_udp_echo_client.cpp)
+TARGET_LINK_LIBRARIES(blocking_udp_echo_client boost_system pthread boost_thread)
+
+ADD_EXECUTABLE(blocking_udp_echo_server blocking_udp_echo_server.cpp)
+TARGET_LINK_LIBRARIES(blocking_udp_echo_server boost_system pthread boost_thread)
+
+ADD_EXECUTABLE(allocation_server allocation_server.cpp)
+TARGET_LINK_LIBRARIES(allocation_server boost_system pthread boost_thread)
+
+ADD_EXECUTABLE(process_per_connection process_per_connection.cpp)
+TARGET_LINK_LIBRARIES(process_per_connection boost_system pthread boost_thread)
+
+ADD_EXECUTABLE(process_per_con process_per_con.cpp)
+TARGET_LINK_LIBRARIES(process_per_con boost_system pthread boost_thread)

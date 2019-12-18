@@ -32,6 +32,7 @@ public:
   {
 	  //通过strand_成员dispatch handlers可以保证handler一个接一个的执行，不会并发执行。所以这里不在乎是否有多个线程都执行了io_context::run()
 	  //如果不通过strand_dispatch或者通过不同的strand，则可能会并发执行。
+	  //boost::asio::bind_executor返回一个新的handler
     timer1_.async_wait(boost::asio::bind_executor(strand_,
           boost::bind(&printer::print1, this)));
 
