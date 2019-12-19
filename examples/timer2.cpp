@@ -19,7 +19,11 @@ int main(){
 
 	t.async_wait(&print);
 
+	auto guard = boost::asio::make_work_guard(ioc);
+
 	ioc.run();
+
+
 
 	return 0;
 }
